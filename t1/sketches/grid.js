@@ -4,13 +4,13 @@ function setup(){
 }
 
 function draw(){
-	var nLines = 20;
-	var thickness = 8;
+	var nLines = 15;
+	var thickness = 10;
 	//stroke(128);
 	//strokeWeight(5);
 	for(var i=0;i<nLines;i++)
 	{
-		stroke(128);
+		stroke(64);
 		strokeWeight(thickness);
 		line(0,i*height/nLines,width,i*height/nLines);
 		line(i*width/nLines,0,i*width/nLines,height);
