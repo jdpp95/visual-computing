@@ -31,23 +31,46 @@ var grid = function(p) {
 
 var feet = function(p) {
     
-    var nBars = 15;
+    var nBars = 30;
     var thickness;
+    var x = 0;
+    var speed = 0.5;
     
     p.setup = function () {
-        p.createCanvas(600,600);
+        p.createCanvas(600,300);
         p.background(255);
         thickness = p.width/(nBars*2);
-        p.strokeWeight(thickness);
-        p.stroke(0);
-        for(var i=0; i<nBars; i++)
-        {
-            p.line(i*thickness,0,i*thickness,p.height);
-        }
     }
     
     p.draw = function () {
+        var rw = 60, rh = 30;
+        var forward = true;
+        p.background(255);
+        if(!p.mouseIsPressed)
+        {
+            p.showBars();
+        }
+        p.noStroke();
+        p.fill(255,255,0);
+        p.rect(x,100,rw,rh);
+        p.fill(0,0,200);
+        p.rect(x,150,rw,rh);
+        //x++;
+        if(x > p.width - rw || x < 0)
+            speed *= -1;
         
+        x += speed;
+        
+    }
+    
+    p.showBars = function ()
+    {
+        p.strokeWeight(thickness);
+        p.stroke(0);
+        for(var i=0; i<=nBars; i++)
+        {
+            p.line(i*2*thickness,0,i*2*thickness,p.height);
+        }
     }
 };
 
