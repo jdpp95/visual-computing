@@ -23,7 +23,7 @@ Complete la tabla:
 |    Ilusión         |   Categoria     | Referencia | Tipo de interactividad (si aplica) | URL código base (si aplica) |
 |--------------------|-----------------|------------|------------------------------------|-----------------------------|
 | Ebbinghaus         | Tamaño relativo |            |                                    |                             |
-| Stuart Antsis      | Movimiento      |  d          |                                    |                             |
+| Stuart Antsis      | Movimiento      |  d     nmnbmn    |                                    |                             |
 | Lilac chase        | Movimiento      |            |                                    |                             |
 | Scintillating Grid | Grilla          |            |                                    |                             |
 | Cafe-Wall          | Geométrica      |            |                                    |                             |
