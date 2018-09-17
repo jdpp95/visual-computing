@@ -20,16 +20,19 @@ Complete la tabla:
 
 1. Complete la la tabla
 
-|    Ilusión         |   Categoria     | Referencia | Tipo de interactividad (si aplica) | URL código base (si aplica) |
-|--------------------|-----------------|------------|------------------------------------|-----------------------------|
-| Ebbinghaus         | Tamaño relativo |            |                                    |                             |
-| Stuart Antsis      | Movimiento      |  d          |                                    |                             |
-| Lilac chase        | Movimiento      |            |                                    |                             |
-| Scintillating Grid | Grilla          |            |                                    |                             |
-| Cafe-Wall          | Geométrica      |            |                                    |                             |
-| Illusory Square    | Otros           |            |                                    |                             |
+|    Ilusión         |   Categoria     | Tipo de interactividad (si aplica) |
+|--------------------|-----------------|------------------------------------|
+| Ebbinghaus         | Tamaño relativo | Se mueve el cursos horizontalmente |
+| Stuart Antsis      | Movimiento      | Clic para quitar rejilla           |
+| Lilac chase        | Movimiento      |                                    |                             
+| Scintillating Grid | Grilla          |                                    |                             
+| Cafe-Wall          | Geométrica      | Funciona al pasar el cursor        |                      
+| Illusory Square    | Otros           |                                    |
 
-2. Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar:
+
+Las ilusiones ópticas se pueden encontrar en el siguiente [enlace.](https://jdpp95.github.io/visual-computing/t1/)
+
+El código fuente de las ilusiones ópticas se basa en el código publicado en el [repositorio de la asignatura](https://github.com/VisualComputing/Cognitive)
 
 ## Entrega
 

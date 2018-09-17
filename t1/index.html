@@ -10,12 +10,9 @@
     <script src="sketches/lib/addons/p5.dom.min.js"></script>
     <script src="sketches/lib/addons/p5.sound.min.js"></script>
     <script type="text/javascript" src="sketches/sketches.js"></script>
-    
-
 </head>
 
 <body>
-
     <article>
         
         <h1> Taller 1 </h1>
@@ -26,6 +23,9 @@
             <button class="tablinks" onclick="openIllusion(event, 'grid')">Grilla</button>
             <button class="tablinks" onclick="openIllusion(event, 'feet')">Stuart Anstis (Pasos)</button>
             <button class="tablinks" onclick="openIllusion(event, 'lilac')">Lilac Chase</button>
+            <button class="tablinks" onclick="openIllusion(event, 'iSquare')">Illusory square</button>
+            <button class="tablinks" onclick="openIllusion(event, 'cafeWall')">Cafe-Wall</button>
+            <button class="tablinks" onclick="openIllusion(event, 'circles')">Ebbinghaus</button>
         </div>
 
         <!-- Tab content -->
@@ -43,8 +43,22 @@
             <h2>Lilac Chase</h2>
             <div id='lilac_id' class="illusion"></div>
         </div>
+        
+        <div id="iSquare" class="tabcontent">
+            <h2>Ilussory square</h2>
+            <div id='iSquare_id' class="illusion"></div>
+        </div>
+        
+        <div id="cafeWall" class="tabcontent">
+            <h2>Cafe-Wall</h2>
+            <div id='cafeWall_id' class="illusion"></div>
+        </div>
+        
+        <div id="circles" class="tabcontent">
+            <h2>Ebbinghaus</h2>
+            <div id='circles_id' class="illusion"></div>
+        </div>
     </article>
 
 </body>
-
 </html>
