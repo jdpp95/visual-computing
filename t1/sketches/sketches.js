@@ -19,7 +19,7 @@ var grid = function (p) {
             p.stroke(255);
 
         }
-        for(var i=0; i<nLines; i++)
+        for(i=0; i<nLines; i++)
             for(var j=0; j<nLines;j++)
             {
                 p.strokeWeight(1);
@@ -134,3 +134,24 @@ var lilac = function(p)
 var sketch1 = new p5(grid, 'grid_id');
 var sketch2 = new p5(feet, 'feet_id');
 var sketch3 = new p5(lilac, 'lilac_id');
+
+function openIllusion(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}

@@ -1,17 +1,50 @@
 <html lang="es">
+
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Canvas</title>
-	<script type="text/javascript" src="sketches/lib/p5.js"></script>
-	<script src="sketches/lib/addons/p5.dom.min.js"></script>
+    <title>Taller 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="sketches/lib/p5.js"></script>
+    <script src="sketches/lib/addons/p5.dom.min.js"></script>
     <script src="sketches/lib/addons/p5.sound.min.js"></script>
     <script type="text/javascript" src="sketches/sketches.js"></script>
+    
+
 </head>
 
 <body>
-	<div id='grid_id'></div>
-    <div id='feet_id'></div>
-    <div id='lilac_id'></div>
+
+    <article>
+        
+        <h1> Taller 1 </h1>
+
+        <p> Escoja la ilusión óptica que desea ver. </p>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openIllusion(event, 'grid')">Grilla</button>
+            <button class="tablinks" onclick="openIllusion(event, 'feet')">Stuart Anstis (Pasos)</button>
+            <button class="tablinks" onclick="openIllusion(event, 'lilac')">Lilac Chase</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="grid" class="tabcontent">
+            <h2>Grilla</h2>
+            <div id='grid_id' class="illusion"></div>
+        </div>
+
+        <div id="feet" class="tabcontent">
+            <h2>Stuart Anstis (Pasos)</h2>
+            <div id='feet_id' class="illusion"></div>
+        </div>
+
+        <div id="lilac" class="tabcontent">
+            <h2>Lilac Chase</h2>
+            <div id='lilac_id' class="illusion"></div>
+        </div>
+    </article>
+
 </body>
+
 </html>
