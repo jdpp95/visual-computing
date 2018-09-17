@@ -74,5 +74,63 @@ var feet = function(p) {
     }
 };
 
+var lilac = function(p)
+{
+    var xcenter, ycenter, skip=0;
+    p.setup = function () {
+        p.createCanvas(600,600);
+        p.stroke(0);
+        p.strokeWeight(2);
+        p.frameRate(5);
+        
+        xcenter = p.width/2;
+        ycenter = p.height/2;
+    }
+    
+    p.draw = function () {
+        p.background(128);
+        p.line(xcenter-5,ycenter,xcenter+5,ycenter);
+        p.line(xcenter,ycenter-5,xcenter,ycenter+5);
+        var nCircles = 20;
+        //var r=5, R=20;
+        
+        p.translate(xcenter,ycenter);
+        for(var i=0; i<nCircles; i++)
+        {
+            p.push();
+            if(i != skip)
+            {
+                p.rotate(i*2.0*p.PI/nCircles);
+                p.drawBlurCircles(180, 0, 120);
+            }
+            p.pop();
+        }
+        
+        skip = (skip+1) % nCircles;
+        //console.log(skip);
+    }
+    
+    p.drawBlurCircles = function(x, y, r) {
+        //console.log("Drawing...")
+        p.push();
+        p.push();
+        p.noStroke();
+        var opc = 0.4;
+        var step = 3.0/r;
+
+        for (var i = r; i > 0; i-=1.5) {
+          if (opc < 5) {
+            opc += step;
+            p.fill(255, 255, 0, opc);
+          }
+          p.ellipse(x, y, i, i);
+        }
+        p.pop();
+        p.pop();
+    };
+};
+
+
 var sketch1 = new p5(grid, 'grid_id');
 var sketch2 = new p5(feet, 'feet_id');
+var sketch3 = new p5(lilac, 'lilac_id');
