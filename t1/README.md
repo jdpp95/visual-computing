@@ -22,11 +22,11 @@ Complete la tabla:
 
 |    Ilusión         |   Categoria     | Referencia | Tipo de interactividad (si aplica) | URL código base (si aplica) |
 |--------------------|-----------------|------------|------------------------------------|-----------------------------|
-| Ebbinghaus         | Tamaño relativo |            |                                    |                             |
-| Stuart Antsis      | Movimiento      |  d     nmnbmn    |                                    |                             |
+| Ebbinghaus         | Tamaño relativo |            |Slider para fijar tamaño            |                             |
+| Stuart Antsis      | Movimiento      |            |                                    |                             |
 | Lilac chase        | Movimiento      |            |                                    |                             |
 | Scintillating Grid | Grilla          |            |                                    |                             |
-| Cafe-Wall          | Geométrica      |            |                                    |                             |
+| Cafe-Wall          | Geométrica      |            |Funciona al pasar el cursor         |                             |
 | Illusory Square    | Otros           |            |                                    |                             |
 
 2. Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar:
