@@ -23,5 +23,4 @@ function draw(){
 			strokeWeight(1);
 			ellipse(i*width/nLines,j*height/nLines,thickness,thickness);
 		}
-
 }
