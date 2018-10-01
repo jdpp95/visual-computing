@@ -31,11 +31,14 @@ Complete la tabla:
 
 | Integrante | github nick |
 |------------|-------------|
-|            |             |
+| Juan David Porras Palencia |    jdpp95  |
+| Juan David Gaitán Forero | jdgaitanf |
 
 ## Discusión
 
-Describa los resultados obtenidos. En el caso de anti-aliasing describir las técnicas exploradas, citando las referencias.
+Al aplicar las funciones de borde (Edge functions) se pudo saber que puntos se encontraban dentro del triángulo coloreándolos y haciendo la rasterización el triángulo.
+
+Posteriormente se calcularon las coordenadas baricéntricas para aplicar mayor cantidad de color a cada punto de acuerdo a su cercanía a un vértice. Más específicamente, se le asignaron los colores rojo, verde y azul a cada vértice de acuerdo con los valores RGB de cada pixel.
 
 ## Entrega
 
