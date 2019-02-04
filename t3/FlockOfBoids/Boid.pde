@@ -9,6 +9,7 @@ class Boid {
   float sc = 3; // scale factor for the render of the boid
   float flap = 0;
   float t = 0;
+  final int IMMEDIATE = 0, RETAINED = 1;
 
   Boid(Vector inPos) {
     position = new Vector();
@@ -20,7 +21,7 @@ class Boid {
         public void visit() {
         if (animate)
           run(flock);
-        render();
+        render(IMMEDIATE);
       }
     };
     frame.setPosition(new Vector(position.x(), position.y(), position.z()));
@@ -130,7 +131,7 @@ class Boid {
       position.setZ(flockDepth);
   }
 
-  void render() {
+  void render(int mode) {
     pushStyle();
 
     // uncomment to draw boid axes
@@ -152,24 +153,51 @@ class Boid {
       fill(color(255, 0, 0));
     }
 
-    //draw boid
-    beginShape(TRIANGLES);
-    vertex(3 * sc, 0, 0);
-    vertex(-3 * sc, 2 * sc, 0);
-    vertex(-3 * sc, -2 * sc, 0);
-
-    vertex(3 * sc, 0, 0);
-    vertex(-3 * sc, 2 * sc, 0);
-    vertex(-3 * sc, 0, 2 * sc);
-
-    vertex(3 * sc, 0, 0);
-    vertex(-3 * sc, 0, 2 * sc);
-    vertex(-3 * sc, -2 * sc, 0);
-
-    vertex(-3 * sc, 0, 2 * sc);
-    vertex(-3 * sc, 2 * sc, 0);
-    vertex(-3 * sc, -2 * sc, 0);
-    endShape();
+    //draw boid immediate mode
+    switch(mode)
+    {
+      case IMMEDIATE:
+        beginShape(TRIANGLES);
+        vertex(3 * sc, 0, 0);
+        vertex(-3 * sc, 2 * sc, 0);
+        vertex(-3 * sc, -2 * sc, 0);
+    
+        vertex(3 * sc, 0, 0);
+        vertex(-3 * sc, 2 * sc, 0);
+        vertex(-3 * sc, 0, 2 * sc);
+    
+        vertex(3 * sc, 0, 0);
+        vertex(-3 * sc, 0, 2 * sc);
+        vertex(-3 * sc, -2 * sc, 0);
+    
+        vertex(-3 * sc, 0, 2 * sc);
+        vertex(-3 * sc, 2 * sc, 0);
+        vertex(-3 * sc, -2 * sc, 0);
+        
+        endShape();
+        break;
+      case RETAINED:
+        PShape s;
+        s = createShape(TRIANGLES);
+        s.vertex(3 * sc, 0, 0);
+        s.vertex(-3 * sc, 2 * sc, 0);
+        s.vertex(-3 * sc, -2 * sc, 0);
+    
+        s.vertex(3 * sc, 0, 0);
+        s.vertex(-3 * sc, 2 * sc, 0);
+        s.vertex(-3 * sc, 0, 2 * sc);
+    
+        s.vertex(3 * sc, 0, 0);
+        s.vertex(-3 * sc, 0, 2 * sc);
+        s.vertex(-3 * sc, -2 * sc, 0);
+    
+        s.vertex(-3 * sc, 0, 2 * sc);
+        s.vertex(-3 * sc, 2 * sc, 0);
+        s.vertex(-3 * sc, -2 * sc, 0);
+        
+        s.endShape();
+        break;
+    }
 
     popStyle();
   }

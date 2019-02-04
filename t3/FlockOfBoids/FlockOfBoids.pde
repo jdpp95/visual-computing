@@ -52,11 +52,13 @@ void setup() {
 }
 
 void draw() {
+  
   background(10, 50, 25);
   ambientLight(128, 128, 128);
   directionalLight(255, 255, 255, 0, 1, -100);
   walls();
   scene.traverse();
+  
   // uncomment to asynchronously update boid avatar. See mouseClicked()
   // updateAvatar(scene.trackedFrame("mouseClicked"));
 }
