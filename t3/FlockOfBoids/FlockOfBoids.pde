@@ -59,6 +59,11 @@ void draw() {
   walls();
   scene.traverse();
   
+  pushStyle();
+  fill(255);
+  bezier(20,50,80,70,100,120,80,800,150,50,500,20);
+  popStyle();
+  
   // uncomment to asynchronously update boid avatar. See mouseClicked()
   // updateAvatar(scene.trackedFrame("mouseClicked"));
 }

@@ -10,6 +10,7 @@ class Boid {
   float flap = 0;
   float t = 0;
   final int IMMEDIATE = 0, RETAINED = 1;
+  PShape s;
 
   Boid(Vector inPos) {
     position = new Vector();
@@ -46,6 +47,8 @@ class Boid {
     flock(bl);
     move();
     checkBounds();
+    if(s != null)
+      shape(s, 0, 0);
   }
 
   Vector avoid(Vector target) {
@@ -177,8 +180,9 @@ class Boid {
         endShape();
         break;
       case RETAINED:
-        PShape s;
-        s = createShape(TRIANGLES);
+        
+        s = createShape();
+        s.beginShape(TRIANGLES);
         s.vertex(3 * sc, 0, 0);
         s.vertex(-3 * sc, 2 * sc, 0);
         s.vertex(-3 * sc, -2 * sc, 0);
